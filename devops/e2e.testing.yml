@@ -1,8 +1,8 @@
 steps:
   - task: NodeTool@0
-    displayName: 'Use Node 12.x'
+    displayName: 'Use Node 14.15.x'
     inputs:
-      versionSpec: 12.x
+      versionSpec: 14.15.x
     
   - task: Cache@2
     displayName: 'Cache npm'
