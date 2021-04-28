@@ -16,10 +16,10 @@ variables:
   - group: vargroup-master
 - ${{ if ne(variables['build.SourceBranchName'], 'master') }}:
   - group: vargroup-dev
-# - name: npm_config_cache
-#   value: $(Pipeline.Workspace)/.npm
-# - name: CYPRESS_CACHE_FOLDER # Overrides the default cache location
-#   value: $(Pipeline.Workspace)/.cache/Cypress
+- name: npm_config_cache
+  value: $(Pipeline.Workspace)/.npm
+- name: CYPRESS_CACHE_FOLDER # Overrides the default cache location
+  value: $(Pipeline.Workspace)/.cache/Cypress
 
 stages:
 - stage: e2e_testing_stage_chrome
